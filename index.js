@@ -28,13 +28,14 @@ async function download() {
 	core.info("Download complete");
 	client.close();
 }
-async function edit()
-var file = await fs.readFileAsync("./updaterListing.json")
-var content = JSON.parse(file)
-	core.info(content)
+async function edit() {
+	var file = await fs.readFileAsync("./updaterListing.json");
+	var content = JSON.parse(file);
+	core.info(content);
+}
 
-end
-
-
-await download();
-await edit()
+async function run() {
+	await download();
+	await edit();
+}
+run();
