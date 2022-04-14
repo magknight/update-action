@@ -9,22 +9,32 @@ var ftpUrl = core.getInput("ftpUrl", { required: true });
 core.setSecret("username");
 core.setSecret("password");
 async function download() {
-	core.info("It's running");
-	return true;
-	// const client = new ftp.Client();
-	// client.ftp.verbose = true;
-	// try {
-	// 	await client.access({
-	// 		host: ftpUrl,
-	// 		user: username,
-	// 		password: password,
-	// 		secure: true,
-	// 	});
-	// 	await client.downloadTo("updateListing.json", "updateListing.json");
-	// } catch (err) {
-	// 	console.log(err);
-	// }
-	// client.close();
+	core.info("Beginning download setup");
+	// return true;
+	const client = new ftp.Client();
+	client.ftp.verbose = true;
+	try {
+		await client.access({
+			host: ftpUrl,
+			user: username,
+			password: password,
+			secure: true,
+		});
+		core.info("Downloading");
+		await client.downloadTo("updaterListing.json", "updaterListing.json");
+	} catch (err) {
+		console.log(err);
+	}
+	core.info("Download complete");
+	client.close();
 }
+async function edit()
+var file = await fs.readFileAsync("./updaterListing.json")
+var content = JSON.parse(file)
+	core.info(content)
 
-download();
+end
+
+
+await download();
+await edit()
