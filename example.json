@@ -1,0 +1,16 @@
+[
+	{
+		"name": "aviatorsEditionLive",
+		"type": "live",
+		"version": "v1.7.24",
+		"dateTime": 0,
+		"enabled": true
+	}
+	{
+		"name": "aviatorsEditionCygnus",
+		"type": "beta",
+		"version": "v1.7.24",
+		"dateTime": 0,
+		"enabled": false
+	}
+]

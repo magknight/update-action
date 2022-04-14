@@ -1,0 +1,22 @@
+name: "Create updateListing.json"
+description: "used for the 787's 'a new update is available' message"
+inputs:
+  version: # id of input
+    description: "Version to write"
+    required: true
+  username: # id of input
+    description: "Branch to send to skunkcrafts file"
+    required: true
+  password: # id of input
+    description: "Branch to send to skunkcrafts file"
+    required: true
+  ftpUrl: # id of input
+    description: "Branch to send to skunkcrafts file"
+    required: true
+  branch: # id of input
+    description: "Branch to send to skunkcrafts file"
+    required: false
+
+runs:
+  using: "node12"
+  main: "index.js"

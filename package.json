@@ -1,0 +1,16 @@
+{
+  "name": "update-action",
+  "version": "1",
+  "description": "Action to create an update file showing all available updates",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "Alex Beavil/Magknight",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.6.0",
+    "basic-ftp": "^4.6.6"
+  }
+}
