@@ -5,17 +5,14 @@ inputs:
     description: "Version to write"
     required: true
   username: # id of input
-    description: "Branch to send to skunkcrafts file"
+    description: "FTP Username (secret)"
     required: true
   password: # id of input
-    description: "Branch to send to skunkcrafts file"
+    description: "FTP Password (secret)"
     required: true
   ftpUrl: # id of input
-    description: "Branch to send to skunkcrafts file"
+    description: "FTP URL (secret)"
     required: true
-  branch: # id of input
-    description: "Branch to send to skunkcrafts file"
-    required: false
 
 runs:
   using: "node12"

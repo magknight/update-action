@@ -1,16 +1,23 @@
-[
-	{
+{
+	"aviatorsEditionLive": {
 		"name": "aviatorsEditionLive",
 		"type": "live",
 		"version": "v1.7.24",
 		"dateTime": 0,
 		"enabled": true
-	}
-	{
+	},
+	"aviatorsEditionCygnus": {
+		"name": "aviatorsEditionCygnus",
+		"type": "beta",
+		"version": "v1.7.24",
+		"dateTime": 0,
+		"enabled": false
+	},
+	"aviatorsEditionLibra": {
 		"name": "aviatorsEditionCygnus",
 		"type": "beta",
 		"version": "v1.7.24",
 		"dateTime": 0,
 		"enabled": false
 	}
-]
+}
