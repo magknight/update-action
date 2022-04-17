@@ -11,7 +11,7 @@ var fileName = "updaterListing.json";
 core.setSecret("username");
 core.setSecret("password");
 const client = new ftp.Client();
-client.ftp.verbose = true;
+// client.ftp.verbose = true;
 async function download() {
 	core.info("Beginning download setup");
 	try {
@@ -107,5 +107,6 @@ async function run() {
 		core.error(`An error occurred in updating the updater listing`);
 		console.error(err);
 	}
+	core.info("Mission Complete");
 }
 run();
