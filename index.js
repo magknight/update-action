@@ -59,15 +59,15 @@ async function identifyBranch() {
 			);
 		}
 		if (/alpha/.test(version)) {
-			return "aviatorsEditionCygnus", "alpha";
+			return ["aviatorsEditionCygnus", "alpha"];
 		} else if (/beta/.test(version)) {
-			return "aviatorsEditionCygnus", "beta";
+			return ["aviatorsEditionCygnus", "beta"];
 		} else if (/libra/.test(version)) {
-			return "aviatorsEditionLibra", "libra";
+			return ["aviatorsEditionLibra", "libra"];
 		} else if (!/-/.test(version)) {
-			return "aviatorsEditionLive", "stable";
+			return ["aviatorsEditionLive", "stable"];
 		} else if (/releaseCandidate/.test(version)) {
-			return "aviatorsEditionLive", "releaseCandidate";
+			return ["aviatorsEditionLive", "releaseCandidate"];
 		}
 	} catch (err) {
 		throw new Error("Branch unknown");
@@ -98,8 +98,7 @@ async function edit(branch, branchType) {
 
 async function run() {
 	try {
-		let branch,
-			branchType = await identifyBranch();
+		let [branch, branchType] = await identifyBranch();
 		core.info(`Branch is '${branch}'; type is: '${branchType}'`);
 		await download();
 		await edit(branch, branchType);
